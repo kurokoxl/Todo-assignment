@@ -1,0 +1,197 @@
+.heading-section{
+    background: linear-gradient(to right,rgb(2,228,171),rgb(74,216,240));
+    padding:100px;
+
+    h1.title{
+        font-weight: bold;
+        color: white;
+        text-shadow: 0px 1px 2px rgba(black,0.7) ;
+    }
+}
+.container{
+    width:  800px;
+}
+.add-todo-box{
+    padding:25px; 
+    border-radius: 4px;
+    margin: -30px;
+    background: white;
+
+    box-shadow: 0 4px 12px rgba(black,0.7);
+  
+}
+.todo-item{
+    display: flex; 
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 35px 15px;
+    border-bottom: 1px solid #f2f3f5;
+    /* completedddd */
+    &.completed{ 
+        color: #aaa;
+        .check-box{
+            background: rgb(11, 223, 170);
+            border-color:rgb(11, 223, 170);
+            i.material-icons{
+                opacity: 1;
+                color: black;
+            }
+        }
+    }
+    .check-box{
+        border: 2px solid #eee;
+        border-radius: 50%;
+        height: 28px;
+        width: 28px;
+        margin-right: 20px;
+        transition: bacground-color 0.3s ease-in-out;
+
+        i.material-icons{
+            font-size: 20px;
+            margin: 2px;
+            color: #333;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+           
+        }
+    }
+    &:hover{
+    .check-box {
+        background: #eee;
+        i.material-icons{
+            opacity: 0.7;
+        }
+    }
+    
+}
+
+}
+.todo-item .todo-control-box{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    display: flex;
+    opacity: 0px;
+    visibility: hidden;
+    transition: opacity 0.2s ,visibility 0.2s ,transform 0.2s;
+    transform: translateY(4px);
+    
+
+    }
+.todo-control-box .todo-control-button{
+    display: flex;
+    background: #f5f7f8;
+    padding: 7px 10px;
+
+    i.material-icons{
+        font-size: 20px;
+    }
+    &:hover{
+        background-color: #eee;
+    }
+    &:active{
+        background-color: #e5e7e8bb;
+    }
+    &:first-of-type{
+        border-top-left-radius: 7px;
+    
+    }
+    &:last-of-type{
+        border-top-right-radius: 7px;
+
+    }
+}
+.todo-control-box .todo-control-button.is-danger{
+    &:hover{
+        background: rgb(214, 34, 34);
+    }
+    &:active{
+        background-color: #e5e7e8bb;
+    }
+
+
+}
+.todo-item:hover .todo-control-box{
+    
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 0.4s;
+
+            transform: translateY(0);
+
+}
+.todo-description{
+    color: #aaa;
+    font-size: smaller;
+    font-weight: lighter;
+}
+.todo-duedate{
+    color: #b34343;
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
